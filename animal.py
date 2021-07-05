@@ -5,15 +5,19 @@ class Animal:
     def __init__(self, name, age, health_level=75, happiness_level=50):
         self.name = name
         self.age = age
-        self.location = ' an enclosure set up to feel like their natural habitat'
+        self.species = 'animal'
+        self.location = 'an enclosure set up to feel like their natural habitat'
         self.health = health_level
         self.happiness = happiness_level
 
 
     def introduction(self):
         intros = [
-                   f'Here in {self.location}, we have {self.name}.',
-                   f'Looking over on the other side of the tourbus, you\'ll see {self.name} living it up in {self.location}!'
+                   f'Here in {self.location}, we have {self.name} the {self.species}.  {self.name} is {self.age} years old.',
+                   f'Looking over on the other side of the tourbus, you\'ll see {self.name} the {self.age}-year old {self.species} living it up in {self.location}!',
+                   f'If you look to your left, you can wave hello to {self.name}, our famous {self.species}.  {self.name} is a {self.age} year old {self.species} that we recently received.',
+                   f'Over to your right in {self.location}, you will find our wonderful {self.species} known as {self.name}.  {self.name} is {self.age} years old and has been a highlight on our tours for some time now.',
+                   f'Oh, would you look at that!!  There\'s {self.name} in our {self.location}!!  {self.name} is a friendly {self.age} year old {self.species} and has come out to great you.  Everyone say hello to {self.name}!!'
                  ]
         return choice(intros)
 
@@ -50,8 +54,14 @@ class Animal:
             return choice(happiness_poor)
 
 
+    def species(self):
+        raise NotImplementedError
+
+
     def features_info(self):
         raise NotImplementedError
+
+
 
 
     def __str__(self): 

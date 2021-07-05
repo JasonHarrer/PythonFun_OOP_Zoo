@@ -10,6 +10,8 @@ class Lion(Animal):
 
     def __init__(self, name, age, health_level=80, happiness_level=40):
         super().__init__(name, age, health_level, happiness_level)
+        self.species = 'lion'
+        self.location = 'the Lion\'s Den'
 
 
     def features_info(self):

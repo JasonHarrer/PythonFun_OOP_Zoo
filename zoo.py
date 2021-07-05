@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import animal
+from elephant import Elephant
 from lion import Lion
 from random import choice, randint
 
@@ -20,7 +21,7 @@ female_animal_names = [ "Alice",   "Brianne", "Carla",   "Dianne", "Esme",
 
                         
 
-animal_types = [ Lion ]
+animal_types = [ Lion, Elephant ]
 
 
 class Zoo:
@@ -52,5 +53,5 @@ class Zoo:
 
 
 if __name__ == '__main__':
-    my_zoo = Zoo(randint(1,5))
+    my_zoo = Zoo(randint(3,10))
     print(my_zoo)
